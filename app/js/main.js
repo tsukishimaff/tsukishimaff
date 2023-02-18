@@ -78,9 +78,17 @@ $(function(){
         nextArrow: '<button type="button" class="article-slider__arrow article-slider__arrowright"><img src="images/arrow-slide-right.svg" alt="arrow right"></button>'
     });
     
-    var mixer = mixitup('.gallery__inner', {
-        load: {
-           filter: '.living'
-        }
-    })
+    var containerEl = document.querySelector('.gallery-container');
+    var mixer;
+
+    if (containerEl) {
+    mixer = mixitup(containerEl, {
+         selectors: {
+             control: '[data-mixitup-control]'
+         },
+         load: {
+             filter: '.engagement-ceremony'
+         }
+    });
+    }   
 })
