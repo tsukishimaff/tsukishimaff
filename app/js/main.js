@@ -90,5 +90,5 @@ $(function(){
              filter: '.engagement-ceremony'
          }
     });
-    }   
+    }
 })
