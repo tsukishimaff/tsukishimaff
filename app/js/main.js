@@ -22,6 +22,18 @@ $(function(){
         autoplay: true
     });
 
+    var containerEl = document.querySelector('.gallery__inner');
+    var mixer;
+
+    if (containerEl) {
+        mixer = mixitup(containerEl, {
+            load: {
+                filter: '.living'
+            }
+        });
+    }
+
+
     $('.contact-slider').slick({
         slidesToShow: 10,
         slidesToScroll: 10,
@@ -77,5 +89,6 @@ $(function(){
         prevArrow: '<button type="button" class="article-slider__arrow article-slider__arrowleft"><img src="images/arrow-slide-left.svg" alt="arrow left"></button>',
         nextArrow: '<button type="button" class="article-slider__arrow article-slider__arrowright"><img src="images/arrow-slide-right.svg" alt="arrow right"></button>'
     });
-    
+
+
 })
